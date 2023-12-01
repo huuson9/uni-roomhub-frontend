@@ -6,14 +6,28 @@ import {
   TableHead,
   TableRow,
   Typography,
+  Checkbox,
 } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
-const TableHeader = ({ headers }) => {
+const TableHeader = (props) => {
+  const { onSelectAllClick, numSelected, rowCount, headers } = props;
+
   return (
     <>
       <TableHead>
         <TableRow>
+          <TableCell padding="checkbox">
+            <Checkbox
+              color="primary"
+              indeterminate={numSelected > 0 && numSelected < rowCount}
+              checked={rowCount > 0 && numSelected === rowCount}
+              onChange={onSelectAllClick}
+              inputProps={{
+                "aria-label": "select all desserts",
+              }}
+            />
+          </TableCell>
           {headers.map((header, index) => (
             // Table Header
             <TableCell

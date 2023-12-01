@@ -4,6 +4,7 @@ export { default as Search } from "./Search/Search";
 
 // Table
 export { default as TableHeader } from "./Table/TableHeader";
+export { default as TableToolbar } from "./Table/TableToolbar";
 
 // Menu
 export { default as UniMenu } from "./Menu/Menu";
