@@ -2,6 +2,8 @@ import { Stack, Button } from "@mui/material";
 import { UniMenu, DatePickerPopover } from "@/components";
 import { Helmet } from "react-helmet-async";
 import AttendanceBody from "./AttendanceBody/AttendanceBody";
+import { NavLink } from "react-router-dom";
+
 // eslint-disable-next-line no-unused-vars
 
 function AttendanceSheet() {
@@ -20,7 +22,9 @@ function AttendanceSheet() {
           <UniMenu />
           <DatePickerPopover />
         </Stack>
-        <Button variant="contained">Generate Sheet</Button>
+        <Button variant="contained" component={NavLink} to="/new-room">
+          Create new room
+        </Button>
       </Stack>
       <AttendanceBody />
     </Stack>
