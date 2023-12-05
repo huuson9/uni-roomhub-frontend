@@ -9,3 +9,7 @@ export { default as TableToolbar } from "./Table/TableToolbar";
 // Menu
 export { default as UniMenu } from "./Menu/Menu";
 export { default as DatePickerPopover } from "./DatePickerPopover/DatePickerPopover";
+
+//Suspense
+export { default as SuspenseContainer } from "./SuspenseContainer/SuspenseContainer";
+export { default as SystemMaintanceDialog } from "./SystemMaintanceDialog/SystemMaintanceDialog";

@@ -1,13 +1,16 @@
 // File: App.js
 import ThemeProvider from "./themes";
 import { HelmetProvider } from "react-helmet-async";
-import Router from "./routers";
+import Router from "./router";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <HelmetProvider>
       <ThemeProvider>
-        <Router />
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
       </ThemeProvider>
     </HelmetProvider>
   );
