@@ -3,7 +3,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 function TableToolbar(props) {
   // eslint-disable-next-line react/prop-types
-  const { numSelected } = props;
+  const { numSelected, onDeleteSelected } = props;
 
   return (
     <Toolbar
@@ -40,8 +40,8 @@ function TableToolbar(props) {
       )}
 
       {numSelected > 0 ? (
-        <Tooltip title="Delete">
-          <DeleteIcon />
+        <Tooltip title="Delete" onClick={onDeleteSelected}>
+          <DeleteIcon sx={{ cursor: "pointer" }} />
         </Tooltip>
       ) : (
         <Tooltip title="Filter list">

@@ -11,6 +11,10 @@ const NotFoundPage = React.lazy(() =>
   import("@/pages/NotFoundPage/NotFoundPage")
 );
 
+const NewRoomPage = React.lazy(() =>
+  import("@/pages/AttendanceSheetPage/NewRoomPage/NewRoomPage")
+);
+
 const isUnderDevelopment = true;
 
 const underDevelopment = (component) =>
@@ -23,6 +27,7 @@ function Router() {
       element: <DashboardLayout />,
       children: [
         { path: "/attendance-sheet", element: <AttendanceSheetPage /> },
+        { path: "/new-room", element: <NewRoomPage /> },
         { path: "/dashboard", element: underDevelopment() },
         { path: "/student", element: underDevelopment() },
         { path: "/report", element: underDevelopment() },
